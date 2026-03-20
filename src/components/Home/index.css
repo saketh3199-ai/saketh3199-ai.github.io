@@ -1,0 +1,222 @@
+.home-page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* keep min-height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* allow vertical scroll if content overflows */
+  padding-bottom: 60px; /* some extra space so bottom cards aren't cut off */
+}
+
+/* Common arrow styles */
+.arrow {
+  position: absolute;
+  top: calc(60px + 50%); /* hero margin + 50% of hero content */
+  font-size: 30px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+/* Hover effect */
+.arrow:hover {
+  background-color: rgba(56, 189, 248, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+
+
+
+.background-1
+{
+    background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c");
+    position:relative;
+    height:100vh;
+    width:100%;
+    background-size: cover;       /* VERY IMPORTANT */
+    background-position: center;  /* keeps focus centered */
+    background-repeat: no-repeat; /* prevents tiling */
+}
+
+
+.background-2
+{
+    background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+    position:relative;
+    height:100vh;
+    width:100%;
+    background-size: cover;       /* VERY IMPORTANT */
+    background-position: center;  /* keeps focus centered */
+    background-repeat: no-repeat; /* prevents tiling */
+}
+
+
+.background-3
+{
+    background-image: url("https://images.unsplash.com/photo-1551836022-d5d88e9218df");
+    position:relative;
+    height:100vh;
+    width:100%;
+    background-size: cover;       /* VERY IMPORTANT */
+    background-position: center;  /* keeps focus centered */
+    background-repeat: no-repeat; /* prevents tiling */
+}
+
+
+.background-4
+{
+    background-image: url(" https://images.unsplash.com/photo-1519681393784-d120267933ba");
+    position:relative;
+    height:100vh;
+    width:100%;
+    background-size: cover;       /* VERY IMPORTANT */
+    background-position: center;  /* keeps focus centered */
+    background-repeat: no-repeat; /* prevents tiling */
+}
+
+
+
+
+
+/* HERO CONTENT */
+.hero-content {
+  margin: 60px 0; /* spacing from top */
+  width: fit-content;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(0, 87, 159, 0.35);
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* TITLE (slight tweak for balance) */
+/* TITLE */
+.hero-title {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 82px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: yellow; /* brighter */
+  margin: 0 0 20px 0;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 20px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+  font-family: 'Poppins', 'Segoe UI', 'sans-serif';
+  font-size: 22px;
+  font-weight: 400;
+  
+  line-height: 1.9;
+
+  color: rgb(255, 255, 255); /* dimmer, softer */
+
+  max-width: 800px;
+  margin: 0;
+
+  text-shadow:
+    0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* space between rows */
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1200px; /* limits total width */
+}
+
+.cert-row {
+  display: flex;
+flex-wrap: wrap; /* allows wrapping */
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  flex-wrap: wrap;
+}
+
+
+
+.attributes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.attribute-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  text-align: center;
+  background: rgba(0, 87, 159, 0.35);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attribute-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.attribute-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.attribute-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .attribute-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .attribute-img {
+    width: 70px;
+    height: 70px;
+  }
+  .attribute-text {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+}

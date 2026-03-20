@@ -1,0 +1,234 @@
+.wpc-1-container {
+  width: 100%;
+  background-color: #020617; /* deeper dark (better contrast) */
+  color: #e2e8f0; /* soft light text */
+  font-family: Arial, sans-serif;
+}
+
+/* Main row */
+.wpc-1-phone-mail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+/* Left side */
+.contact-section {
+  display: flex;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Right side */
+.location-section {
+  display: flex;
+  gap: 20px;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Text */
+.text {
+  font-size: 14px;
+  margin: 0;
+  color: #cbd5f5; /* slightly brighter */
+  transition: color 0.3s ease;
+}
+
+/* Icons */
+.icon {
+  width: 16px;
+  height: 16px;
+  filter: invert(1) brightness(0.9); /* makes icons visible on dark bg */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.contact-item:hover,
+.location-item:hover {
+  color: #38bdf8;
+  transform: translateY(-1px);
+  background-color: rgba(56, 189, 248, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.contact-item:hover .text,
+.location-item:hover .text {
+  color: #38bdf8;
+}
+
+.contact-item:hover .icon,
+.location-item:hover .icon {
+  filter: invert(1) brightness(1.5);
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+/* Second Row Container */
+.wpc-1-second-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+/* Logo Container */
+.wpc-container-1-name-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Box */
+.logo-box {
+  display: flex;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* SAKETH */
+.logo-dark {
+  background-color: #1e293b;
+  color: #38bdf8;
+  padding: 8px 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* NARWA */
+.logo-light {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  padding: 8px 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Nav Links Container */
+.wpc-container-1-navlinks-container {
+  display: flex;
+  gap: 25px;
+}
+
+/* Individual Nav Link */
+.nav-link {
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+  color: #cbd5f5;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* ================= RESPONSIVENESS ================= */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+  .wpc-1-phone-mail-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 20px;
+  }
+
+  .contact-section,
+  .location-section {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .wpc-1-second-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  .wpc-container-1-navlinks-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+  .text {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .logo-dark,
+  .logo-light {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .wpc-container-1-navlinks-container {
+    gap: 10px;
+  }
+
+  .contact-section,
+  .location-section {
+    gap: 10px;
+  }
+}

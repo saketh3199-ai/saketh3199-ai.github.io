@@ -1,0 +1,93 @@
+.cert-card {
+    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:370px; /* fixed width, adjust if needed */
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+ 
+  /* subtle card shadow for depth */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* for overlay */
+  background-color: #0f172a; /* optional dark background behind low-res images */
+}
+
+.cert-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  
+  /* makes low-quality images look better */
+  filter: brightness(1.05) contrast(1.2) saturate(1.2);
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.cert-card img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1) contrast(1.3) saturate(1.3);
+  cursor: pointer;
+}
+
+/* subtle gradient overlay for elegance */
+.cert-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+.cert-text {
+  margin-top: 10px;
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 26px;
+  font-weight: 800;
+  color: #05ff05;
+}
+
+/* Container around the cert name */
+.cert-name-box {
+  margin-top: -20px; /* slight overlap on image */
+  background: linear-gradient(135deg, #38bdf8, #06b6d4);
+  padding: 8px 14px;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover .cert-name-box {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
+/* Text inside the box */
+.cert-name-box .cert-text {
+  margin: 0;
+  color: #fff7a8; /* bright, soft yellow */
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 247, 168, 0.7);
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.cert-card:hover .cert-name-box .cert-text {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 0 12px rgba(255, 247, 168, 0.9);
+}
